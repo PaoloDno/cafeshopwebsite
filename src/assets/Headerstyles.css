@@ -1,8 +1,13 @@
 :root{
-  --mainclr: rgb(105, 107, 238);
-  --manclrlgt: rgb(55, 231, 222);
-  --secondaryclr: rgb(39, 255, 172);
-  --textclr: #252525;
+  --mainclr: #382E1D;
+  --manclrlgt: #804A00;
+  --secondaryclr: #E6BE8A;
+  --textclr: #F5F5F5;
+  --mainclr2: #382E1D;
+  --mainclr3: #604D2D;
+  --mainclr4: #8B6D4C;
+  --mainclr4: #6C6464;
+  
 }
 
 header{
@@ -11,7 +16,7 @@ header{
   justify-content: space-between;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainclr);
+  background-color: var(--mainclr2);
   color: var(--textclr);
 }
 
@@ -31,6 +36,34 @@ header .nav-btn{
   border: none;
   visibility: hidden;
   opacity: 0;
+}
+header button .custom-icon{
+  color: var(--secondaryclr);
+  font-size: 1.5rem;
+}
+
+header nav .navlinks
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-top: 1rem;
+
+  }
+
+ header nav .navlinks .navlinks-right {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  margin: 0 2rem;
+}
+header nav .navlinks .navlinks-left a:last-child {
+  margin-right: 6rem;
 }
 
 @media only screen and (max-width: 1024px){
@@ -61,6 +94,27 @@ header .nav-btn{
     top: 2rem;
     right: 2rem;
   }
-
+  
+  header nav .navlinks
+   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .navlinks-left a{
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+    header nav .navlinks .navlinks-right
+   {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+   }
 
 }

@@ -1,7 +1,10 @@
 import {useRef} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {FaBars, FaTimes} from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import "../assets/Headerstyles.css";
 
-function Navbar() {
+function Header() {
   
   const navRef = useRef();
 
@@ -13,19 +16,27 @@ function Navbar() {
    <header>
     <h3>Logo</h3>
     <nav ref={navRef}>
-      <a href="/#">Home</a>
-      <a href="/#">My Work</a>
-      <a href="/#">About</a>
-      <a href="/#">Contact</a> 
+      <div className="navlinks">
+      
+      <span className="navlinks-left">
+        <a href="/">Menu</a>
+        <a href="/">Goodies</a>
+        <a href="/">About</a>
+      </span>
+      <span className="navlinks-right">
+        <a href="/"><button type="button" className="btn btn-secondary">Login</button></a>
+        <a href="/"><button className="btn btn-outline-secondary">Join</button></a>
+      </span>
+      </div> 
       <button className="nav-btn nav-close-btn">
-        <FaTimes onClick={showNavBar} />
+        <FaTimes onClick={showNavBar} className="custom-icon" />
       </button>
     </nav>
       <button className="nav-btn nav-close-btn">
-        <FaBars onClick={showNavBar} />
+        <FaBars onClick={showNavBar} className="custom-icon" />
       </button>
    </header>
   )
 }
 
-export default Navbar;
+export default Header;
