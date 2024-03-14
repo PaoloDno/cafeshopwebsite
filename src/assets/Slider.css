@@ -1,39 +1,86 @@
-*{
+* {
   box-sizing: border-box;
 }
-:root{
+
+:root {
   --mainclr: #382E1D;
   --manclrlgt: #804A00;
   --secondaryclr: #E6BE8A;
   --textclr: #F5F5F5;
 }
 
-.container {
+.slider-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-.slider-wrapper {
-  display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  flex: 1;
+  height: 100%;
   width: 100%;
-  height: 80vh;   
+  transition: backgound-image 1s ease-in-out;
+  overflow: hidden;
 }
-.arrow-button{
-  font-size: 5rem;
-  color: var(--secondaryclr);
-  padding: 5;
+
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.slider-container .slider-wrapper .arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  padding: 5rem;
   cursor: pointer;
   border: none;
-  opacity: .6;
-  height: 300px;
-  width: 300px;
-  background: transparent;  
+  opacity: .4;
+  background: transparent;
+  transition: opacity 1.5s ease-in;
+  margin: auto;
+}
+
+.slider-container .slider-wrapper .arrow-button .custom-icon{
+  color: var(--textclr);
+  transition: color 1s ease;
+}
+
+.slider-container .slider-wrapper .arrow-button .custom-icon:hover {
+  color: var(--secondaryclr);
+}
+.slider-container .slider-wrapper  .slider-item {
+  background-color: hsla(38, 32%, 17%, 0.9);
+  color: var(--textclr);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: var(--textclr);
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 4px 4px 2px #e6be8a8a; 
+  padding: 1rem;
+}
+
+.slider-container .slider-wrapper .arrow-button:hover {
+  opacity: 1;
+  background-color: rgba(56, 46, 29, 0.5);
+}
+
+
+@media only screen and (max-width: 1024px){
+  .slider-container .slider-wrapper .arrow-button { 
+    display: none;
+    
+  }
 }

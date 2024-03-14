@@ -10,7 +10,7 @@ function HomepageSlider() {
     const intervalId = setInterval(() => {
       const nextIndex = (data.indexOf(currentImage) + 1) % data.length;
       setCurrentImage(data[nextIndex]);
-    }, 5000);
+    }, 15000);
 
     return () => clearInterval(intervalId);
   }, [currentImage]);
@@ -28,23 +28,24 @@ function HomepageSlider() {
   }
 
   return (
-    <Fragment>
-      <div className="slider-container">
+      <div className="slider-container" style={{ backgroundImage: `url("${currentImage.background_img}")` }}>
         {data && data.length > 0 ? (
-          <div className="slider-wrapper" style={{ backgroundImage: `url("${currentImage.background_img}")` }}>
-            <div>
+          <div className="slider-wrapper" >
+            
               <button className="arrow-button left-arrow" onClick={handlePrevious}>
-                <SlArrowLeft />
+                <SlArrowLeft className="custom-icon"/>
               </button>
-            </div>
+            
             <div className="slider-item">
-              <h2>{currentImage.header_text}</h2>
+              <h2 className="slide-in-left">
+                <i>{currentImage.header_text}</i>
+              </h2>
             </div>
-            <div>
+            
               <button className="arrow-button right-arrow" onClick={handleNext}>
-                <SlArrowRight />
+                <SlArrowRight className="custom-icon"/>
               </button>
-            </div>
+            
           </div>
         ) : (
           <div className="slider-wrapper-default">
@@ -52,7 +53,6 @@ function HomepageSlider() {
           </div>
         )}
       </div>
-    </Fragment>
   );
 }
 
