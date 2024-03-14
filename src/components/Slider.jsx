@@ -1,49 +1,56 @@
-import { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import data from "../../public/data/sliderimages.js";
 import "../assets/Slider.css";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 function HomepageSlider() {
-  
-  const [bgImage, setBgImage] = useState(data[0]);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentImage, setCurrentImage] = useState(data[0]);
 
   useEffect(() => {
-    setBgImage(data[0]);
-  }, []);
+    const intervalId = setInterval(() => {
+      const nextIndex = (data.indexOf(currentImage) + 1) % data.length;
+      setCurrentImage(data[nextIndex]);
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [currentImage]);
 
   function handlePrevious() {
-    setCurrentSlide(currentSlide === 0 ? data.length - 1 : currentSlide - 1);
+    const currentIndex = data.indexOf(currentImage);
+    const previousIndex = currentIndex === 0 ? data.length - 1 : currentIndex - 1;
+    setCurrentImage(data[previousIndex]);
   }
 
   function handleNext() {
-    setCurrentSlide(currentSlide === data.length - 1 ? 0 : currentSlide + 1);
+    const currentIndex = data.indexOf(currentImage);
+    const nextIndex = (currentIndex + 1) % data.length;
+    setCurrentImage(data[nextIndex]);
   }
 
   return (
     <Fragment>
-      <div className="container">
-        {data && data.length > 0 ?
-          <div className="slider-wrapper"
-            style={{
-              backgroundImage: `url("${bgImage.background_img}")`,
-             }}
-          >
+      <div className="slider-container">
+        {data && data.length > 0 ? (
+          <div className="slider-wrapper" style={{ backgroundImage: `url("${currentImage.background_img}")` }}>
             <div>
-            <button className="left-button button"onClick={handlePrevious}><SlArrowLeft /> </button>
+              <button className="arrow-button left-arrow" onClick={handlePrevious}>
+                <SlArrowLeft />
+              </button>
             </div>
-            <div className="item">
-             <h2>{bgImage.header_text}</h2>
+            <div className="slider-item">
+              <h2>{currentImage.header_text}</h2>
             </div>
             <div>
-              <button className="right-button button"onClick={handleNext}><SlArrowRight /> </button>
+              <button className="arrow-button right-arrow" onClick={handleNext}>
+                <SlArrowRight />
+              </button>
             </div>
           </div>
-          : 
+        ) : (
           <div className="slider-wrapper-default">
             <h3>No data found!</h3>
           </div>
-        }
+        )}
       </div>
     </Fragment>
   );
