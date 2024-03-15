@@ -14,7 +14,7 @@ function Header() {
 
   return(
    <header>
-    <h3>Logo</h3>
+    <h3>CafeKo</h3>
     <nav ref={navRef}>
       <div className="navlinks">
       

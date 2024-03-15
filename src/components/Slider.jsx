@@ -28,6 +28,7 @@ function HomepageSlider() {
   }
 
   return (
+    <Fragment>
       <div className="slider-container" style={{ backgroundImage: `url("${currentImage.background_img}")` }}>
         {data && data.length > 0 ? (
           <div className="slider-wrapper" >
@@ -53,6 +54,17 @@ function HomepageSlider() {
           </div>
         )}
       </div>
+      <div className="non-slider-container">
+        
+          {data.map((datum, index) => (
+            <div className="card" key={index} style={{backgroundImage: `url("${datum.background_img}")`}}>
+              <h2>{datum.header_text}</h2>
+              <img src={datum.background_img} alt="slider image" />
+            </div>
+          ))}
+        
+      </div>
+    </Fragment>
   );
 }
 

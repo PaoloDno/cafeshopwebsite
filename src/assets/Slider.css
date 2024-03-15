@@ -10,6 +10,7 @@
 }
 
 .slider-container {
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,16 +25,6 @@
   overflow: hidden;
 }
 
-
-.slider-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-}
 
 .slider-container .slider-wrapper .arrow-button {
   display: flex;
@@ -77,10 +68,42 @@
   background-color: rgba(56, 46, 29, 0.5);
 }
 
+.non-slider-container{
+  display: none;
+}
 
 @media only screen and (max-width: 1024px){
   .slider-container .slider-wrapper .arrow-button { 
     display: none;
-    
+  }
+  .slider-container{
+    display: none;
+  }
+  .non-slider-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+  }
+
+  .non-slider-container .card{ 
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-height: 80vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.5rem;
   }
 }

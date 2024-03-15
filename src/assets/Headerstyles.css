@@ -11,7 +11,7 @@
 }
 
 header{
-  z-index: 10;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,6 +73,7 @@ header nav .navlinks .navlinks-left a:last-child {
     opacity: 1;
   }
   header nav {
+    z-index: 100;
     position: fixed;
     top: 0;
     left: 0;

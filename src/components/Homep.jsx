@@ -1,15 +1,16 @@
 
 import React from "react";
-import Header from "./Header";
 import HomepageSlider from "./Slider";
+import Header from "./Header";
 function Homep() {
 return(
   <div className="body-container">
     <Header />
     <div className="content-container">
+    <div></div>
     <HomepageSlider />
     </div>
-    <h3>asdasda</h3>
+    
   </div>
 );
 }
