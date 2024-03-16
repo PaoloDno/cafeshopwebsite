@@ -29,15 +29,17 @@ function HomepageSlider() {
 
   return (
     <Fragment>
-      <div className="slider-container" style={{ backgroundImage: `url("${currentImage.background_img}")` }}>
+      <div className="slider-container cover-background" 
+        style={{ backgroundImage: `url("${currentImage.background_img}")` }}>
         {data && data.length > 0 ? (
-          <div className="slider-wrapper" >
+          <div className="slider-wrapper flex-center" >
             
-              <button className="arrow-button left-arrow" onClick={handlePrevious}>
+              <button className="arrow-button-left-arrow flex-center" onClick={handlePrevious}>
                 <SlArrowLeft className="custom-icon"/>
               </button>
             
             <div className="slider-item">
+              <div className="hero-background-div"></div>
               <h2 className="slide-in-left">
                 {currentImage.header_text}
               </h2>
@@ -46,9 +48,10 @@ function HomepageSlider() {
               <button className="slider-item-button"><a href={currentImage.link}>{currentImage.button_text}</a></button>
               : ""
               }
+              
             </div>
             
-              <button className="arrow-button right-arrow" onClick={handleNext}>
+              <button className="arrow-button-right-arrow flex-center" onClick={handleNext}>
                 <SlArrowRight className="custom-icon"/>
               </button>
             
@@ -61,14 +64,14 @@ function HomepageSlider() {
           </div>
         )}
       </div>
-      <div className="non-slider-container">
+      <div className="non-slider-container" id="non-slider-container">
         
           {data.map((datum, index) => (
-              <div className="card" key={index} 
+              <div className="card flex-center cover-background" key={index} 
               style={{backgroundImage: `url("${datum.bg_card_images}")`, 
               display: index === 0 ? "none" : "flex" 
               }}>
-                <div className="card-description">
+                <div className="card-description flex-center">
                 <h2>{datum.header_text}</h2>
                 <button className="card-button">
                   <a href={datum.link}>

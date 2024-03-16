@@ -12,7 +12,7 @@ const Menu = ({ items }) => {
             <div className='item-info'>
               <div>
                 <h4>{name}</h4>
-                <h4 className='price'>${price}</h4>
+                <h4 className='price'>₱ {price}</h4>
               </div>
               <p className='item-text'>{desc}</p>
             </div>

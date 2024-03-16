@@ -6,14 +6,14 @@ import items from "../../public/data/menulist.js";
 import Header  from './Header.jsx';
 
 
-const allCategories = ['all', ...new Set(items.map((item) => item.category))];
+const allCategories = ['All', ...new Set(items.map((item) => item.category))];
 
 function Orderp() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
-    if (category === 'all') {
+    if (category === 'All') {
       setMenuItems(items);
       return;
     }
@@ -22,14 +22,16 @@ function Orderp() {
   };
 
   return (
-    <div className='order-page'>
+    <div className='order-page flex-center-width-100'>
       <Header />
-      <section className="menu section">
+      <section className="menu-section flex-center-width">
         <div className="title">
-          <h2>our menu</h2>
+          <h2>Our Menu</h2>
           <div className="underline"></div>
         </div>
+        <div className='sticky-bar flex-center-width'>
         <Categories categories={categories} filterItems={filterItems} />
+        </div>
         <Menu items={menuItems} />
       </section>
     </div>

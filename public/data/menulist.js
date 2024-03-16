@@ -5,7 +5,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Coffee",
     "price": 30,
-    "img": "../../public/images/menu_pic/menu5.jpg",
+    "img": "../../public/images/menu_pic/menu8.jpg",
     "desc": "A single shot of strong black coffee made by forcing steam through finely-ground coffee beans."
   },
   {
@@ -13,8 +13,8 @@ const menulist = [
     "name": "Latte",
     "category": "Drinks",
     "sub_category": "Coffee",
-    "price": 40,
-    "img": "../../public/images/menu_pic/menu5.jpg",
+    "price": 60,
+    "img": "../../public/images/menu_pic/menu.jpg",
     "desc": "A coffee drink made with espresso and steamed milk."
   },
   {
@@ -22,8 +22,8 @@ const menulist = [
     "name": "Cappuccino",
     "category": "Drinks",
     "sub_category": "Coffee",
-    "price": 35,
-    "img": "../../public/images/menu_pic/menu5.jpg",
+    "price": 65,
+    "img": "../../public/images/menu_pic/menu2.jpg",
     "desc": "An Italian coffee drink that is traditionally prepared with equal parts double espresso, steamed milk, and milk foam."
   },
   {
@@ -31,7 +31,7 @@ const menulist = [
     "name": "Iced Tea",
     "category": "Drinks",
     "sub_category": "Tea",
-    "price": 25,
+    "price": 45,
     "img": "../../public/images/menu_pic/menu5.jpg",
     "desc": "A chilled tea beverage served over ice cubes, often sweetened and sometimes flavored."
   },
@@ -40,7 +40,7 @@ const menulist = [
     "name": "Club Sandwich",
     "category": "Food",
     "sub_category": "Sandwiches",
-    "price": 50,
+    "price": 40,
     "img": "../../public/images/menu_pic/menu5.jpg",
     "desc": "A delicious sandwich made with sliced chicken or turkey, bacon, lettuce, tomato, and mayonnaise."
   },
@@ -49,7 +49,7 @@ const menulist = [
     "name": "Strawberry Cheesecake",
     "category": "Desserts",
     "sub_category": "Cakes",
-    "price": 55,
+    "price": 75,
     "img": "../../public/images/menu_pic/menu5.jpg",
     "desc": "A creamy cheesecake with a graham cracker crust, topped with fresh strawberries."
   },
@@ -68,8 +68,17 @@ const menulist = [
     "category": "Desserts",
     "sub_category": "Pastries",
     "price": 30,
-    "img": "../../public/images/menu_pic/menu5.jpg",
+    "img": "../../public/images/menu_pic/menu7.jpg",
     "desc": "Sweet, deep-fried dough pastries usually shaped like a ring or filled with cream or jam."
+  },
+  {
+    "id": 8,
+    "name": "Brownies",
+    "category": "Desserts",
+    "sub_category": "Pastries",
+    "price": 80,
+    "img": "../../public/images/menu_pic/menu6.jpg",
+    "desc": "Overloaded with chocolate goodness and nuts on top."
   }
 ]
 
