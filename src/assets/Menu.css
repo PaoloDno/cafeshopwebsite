@@ -1,0 +1,7 @@
+.order-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 180px;
+}

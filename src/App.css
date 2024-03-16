@@ -5,10 +5,15 @@
   margin: 0;
   padding: 0;
 }
-body{
+.body-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-} 
-
+  flex-direction: column;
+  width: 100vw;
+  padding: 1rem;
+  overflow: hidden;
+}
+.body-content {
+  margin-top: 4rem;
+}

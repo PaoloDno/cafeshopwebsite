@@ -14,12 +14,14 @@ function Header() {
 
   return(
    <header>
+    <a href="/">
     <h3>CafeKo</h3>
+    </a>
     <nav ref={navRef}>
       <div className="navlinks">
       
       <span className="navlinks-left">
-        <a href="/">Menu</a>
+        <a href="/order">Menu</a>
         <a href="/">Goodies</a>
         <a href="/">About</a>
       </span>

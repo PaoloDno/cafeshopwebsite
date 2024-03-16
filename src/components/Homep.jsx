@@ -6,11 +6,9 @@ function Homep() {
 return(
   <div className="body-container">
     <Header />
-    <div className="content-container">
-    <div></div>
+    <div className="body-content">
     <HomepageSlider />
     </div>
-    
   </div>
 );
 }

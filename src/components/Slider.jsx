@@ -39,8 +39,13 @@ function HomepageSlider() {
             
             <div className="slider-item">
               <h2 className="slide-in-left">
-                <i>{currentImage.header_text}</i>
+                {currentImage.header_text}
               </h2>
+              <p className="slide-in-left">{currentImage.p_text}</p>
+              { currentImage.button_text != "" ?
+              <button className="slider-item-button"><a href={currentImage.link}>{currentImage.button_text}</a></button>
+              : ""
+              }
             </div>
             
               <button className="arrow-button right-arrow" onClick={handleNext}>
@@ -51,17 +56,29 @@ function HomepageSlider() {
         ) : (
           <div className="slider-wrapper-default">
             <h3>No data found!</h3>
+            <p>{datum.p_text}</p>
+            <button><a href={datum.link}>Order Now</a></button>
           </div>
         )}
       </div>
       <div className="non-slider-container">
         
           {data.map((datum, index) => (
-            <div className="card" key={index} style={{backgroundImage: `url("${datum.background_img}")`}}>
-              <h2>{datum.header_text}</h2>
-              <img src={datum.background_img} alt="slider image" />
-            </div>
+              <div className="card" key={index} 
+              style={{backgroundImage: `url("${datum.bg_card_images}")`, 
+              display: index === 0 ? "none" : "flex" 
+              }}>
+                <div className="card-description">
+                <h2>{datum.header_text}</h2>
+                <button className="card-button">
+                  <a href={datum.link}>
+                    {datum.button_text}
+                  </a></button>
+                </div>
+                
+              </div> 
           ))}
+  
         
       </div>
     </Fragment>

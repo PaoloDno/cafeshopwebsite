@@ -19,12 +19,20 @@
   background-position: center;
   background-repeat: no-repeat;
   flex: 1;
-  height: 100%;
-  width: 100%;
+  height: 90vh;
+  width: 100vw;
   transition: backgound-image 1s ease-in-out;
   overflow: hidden;
 }
-
+.slider-wrapper {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
 
 .slider-container .slider-wrapper .arrow-button {
   display: flex;
@@ -48,28 +56,134 @@
 .slider-container .slider-wrapper .arrow-button .custom-icon:hover {
   color: var(--secondaryclr);
 }
-.slider-container .slider-wrapper  .slider-item {
+.slider-container .slider-wrapper  .slider-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: hsla(38, 32%, 17%, 0.9);
   color: var(--textclr);
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 5.5rem;
-  font-weight: bold;
-  color: var(--textclr);
+  font-size: 2.5rem;
+  height: 80vh;
+  width: 60vw;
+  
+  overflow: hidden;
+}
+.slider-container .slider-wrapper  .slider-item h2{
+  display: flex;
+  position:absolute;
+  top: 140px;
+  bottom: 0px;
+  font-size: 2rem;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   text-shadow: 4px 4px 2px #e6be8a8a; 
   padding: 1rem;
 }
 
+.slider-container .slider-wrapper .slider-item .slider-item-button:hover {
+  background-color: #e29a56c7;
+}
+
+.slider-container .slider-wrapper  .slider-item p{
+  font-style: italic;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-shadow: 4px 4px 2px #e6be8a8a; 
+  padding: 1rem;
+  max-width: 70%;
+}
+.slider-container .slider-wrapper  .slider-item .slider-item-button{
+  display: block;
+  position: absolute; 
+  bottom: 50px;
+  width: 220px;
+  height: 60px;
+  font-size: 1.5rem;
+  background: transparent;
+  transition: background-color 0.5s ease-in-out;
+  border: 2px solid var(--secondaryclr);
+}
+.slider-container .slider-wrapper  .slider-item .slider-item-button a {
+  font-style: none;
+  text-decoration: none;
+  color: var(--textclr);
+}
+
+
 .slider-container .slider-wrapper .arrow-button:hover {
   opacity: 1;
-  background-color: rgba(56, 46, 29, 0.5);
+  background-color: rgba(56, 46, 29, 0.5) ;
 }
 
 .non-slider-container{
-  display: none;
+  display: grid;
+  overflow: hidden;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.non-slider-container .card{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60vh;
+  max-height: 60vh;
+  width: 35vw;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+  border-radius: 1rem;
+  margin: 2rem;
+  flex: 1;
+ 
+}
+
+
+
+.non-slider-container .card .card-description{
+  margin-top: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-color: #382E1D;
+  width: 100%;
+  height: 50%;
+  color: var(--secondaryclr);
+
+}
+
+.non-slider-container .card .card-description .card-button{
+  display: block;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: var(--secondaryclr);
+  border: none;
+  border-radius: 1rem;
+}
+.non-slider-container .card .card-description .card-button a{
+  text-decoration: none;
+  color: var(--mainclr);
+}
+.non-slider-container .card {
+  background-color: #d31b528a;
+  backdrop-filter: blur(10px); 
 }
 
 @media only screen and (max-width: 1024px){
@@ -97,7 +211,7 @@
     display: flex;
     flex-direction: column;
     width: 90vw;
-    max-height: 80vh;
+    min-height: 80vh;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -105,5 +219,21 @@
     background-position: center;
     background-repeat: no-repeat;
     margin: 0.5rem;
+  }
+  .non-slider-container .card h2{
+    display: flex;
+    background-color: hsla(39, 33%, 17%, 0.5);
+    color: var(--textclr);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--textclr);
+    text-align: left;
+    margin-top: 20px;
+    text-shadow: 4px 4px 2px #e6be8a8a; 
+    padding: 1rem;
+    max-width: 70vw;
   }
 }
