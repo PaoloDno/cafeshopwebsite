@@ -5,7 +5,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Coffee",
     "price": 30,
-    "img": "../../public/images/menu_pic/menu8.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu8.jpg",
     "desc": "A single shot of strong black coffee made by forcing steam through finely-ground coffee beans."
   },
   {
@@ -14,7 +14,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Coffee",
     "price": 60,
-    "img": "../../public/images/menu_pic/menu.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu.jpg",
     "desc": "A coffee drink made with espresso and steamed milk."
   },
   {
@@ -23,7 +23,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Coffee",
     "price": 65,
-    "img": "../../public/images/menu_pic/menu2.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu2.jpg",
     "desc": "An Italian coffee drink that is traditionally prepared with equal parts double espresso, steamed milk, and milk foam."
   },
   {
@@ -32,7 +32,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Tea",
     "price": 45,
-    "img": "../../public/images/menu_pic/menu5.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu5.jpg",
     "desc": "A chilled tea beverage served over ice cubes, often sweetened and sometimes flavored."
   },
   {
@@ -41,7 +41,7 @@ const menulist = [
     "category": "Food",
     "sub_category": "Sandwiches",
     "price": 40,
-    "img": "../../public/images/menu_pic/menu5.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu5.jpg",
     "desc": "A delicious sandwich made with sliced chicken or turkey, bacon, lettuce, tomato, and mayonnaise."
   },
   {
@@ -50,7 +50,7 @@ const menulist = [
     "category": "Desserts",
     "sub_category": "Cakes",
     "price": 75,
-    "img": "../../public/images/menu_pic/menu5.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu5.jpg",
     "desc": "A creamy cheesecake with a graham cracker crust, topped with fresh strawberries."
   },
   {
@@ -59,7 +59,7 @@ const menulist = [
     "category": "Sides",
     "sub_category": "Appetizers",
     "price": 20,
-    "img": "../../public/images/menu_pic/menu5.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu5.jpg",
     "desc": "Deep-fried potato strips seasoned with salt, served hot."
   },
   {
@@ -68,7 +68,7 @@ const menulist = [
     "category": "Desserts",
     "sub_category": "Pastries",
     "price": 30,
-    "img": "../../public/images/menu_pic/menu7.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu7.jpg",
     "desc": "Sweet, deep-fried dough pastries usually shaped like a ring or filled with cream or jam."
   },
   {
@@ -77,7 +77,7 @@ const menulist = [
     "category": "Desserts",
     "sub_category": "Pastries",
     "price": 80,
-    "img": "../../public/images/menu_pic/menu6.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu6.jpg",
     "desc": "Overloaded with chocolate goodness and nuts on top."
   }
 ]
