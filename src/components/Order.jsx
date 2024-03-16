@@ -24,7 +24,7 @@ function Orderp() {
   return (
     <div className='order-page flex-center-width-100'>
       <Header />
-      <section className="menu-section flex-center-width">
+      <section className="menu-section flex-center-width-100">
         <div className="title">
           <h2>Our Menu</h2>
           <div className="underline"></div>

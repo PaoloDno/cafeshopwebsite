@@ -20,7 +20,7 @@
   width: 100vw;
 }
 .order-page {
-  margin-top: 180px;
+  margin-top: 100px;
 }
 .menu-section{
   flex-direction: column;
@@ -58,16 +58,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
   width: 100vw;
+  scrollbar-width: 25px;
+  -ms-overflow-style: none;
+
+  ::-webkit-scrollbar {
+  width: 25px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: #302e2e;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: var(--manclrlgt);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+      background: var(--textclr);
+  }
+
+  scrollbar-color: var(--manclrlgt) var(--textclr);
 }
 
-.menu-item{
+.menu-item {
   display: flex;
+  padding: 1rem;
   justify-content: space-around;
   align-items: flex-start;
-  width: 200px;
+  min-width: 200px;
   height: 420px;
   padding: 1rem;
   flex-direction: column;
@@ -110,7 +131,7 @@
   .menu-item {
     justify-content: center;
     align-items: center;
-    width: 40vw;
+    min-width: 40vw;
     height: 80vw;
     font-size: 0.75rem;
     .item-info h4 {
