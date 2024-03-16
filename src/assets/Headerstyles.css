@@ -2,7 +2,7 @@
   --mainclr: #382E1D;
   --manclrlgt: #804A00;
   --secondaryclr: #E6BE8A;
-  --textclr: #F5F5F5;  
+  --textclr: #F5F5F5;
 }
 
 header{
@@ -15,7 +15,7 @@ header{
   justify-content: space-between;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainclr2);
+  background-color: var(--mainclr);
   color: var(--textclr);
   width: 100vw;
   margin-bottom: 80px;
