@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} /> 
         <Route exact path="/order" element={<Order />} />  
-        <Route path="*" element={<NotFound />} /> 
+        /* <Route path="*" element={<NotFound />} /> */
       </Routes>
   </Router>
   )
