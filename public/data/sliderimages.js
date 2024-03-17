@@ -2,7 +2,7 @@ const sliderimage = [
   
   {
     id: 1,
-    background_img: "/cafeshopwebsite/public/images/heroslider/coffeshopinterior.jpg",
+    background_img: "/public/images/heroslider/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/heroslider/coffeeandtable.jpg",
     header_text: "WELCOME TO Cafeko!",
     header_text_card: "Welcome to Cafeko Experience greatness in a cup",
