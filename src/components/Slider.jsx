@@ -1,15 +1,18 @@
 import React, { Fragment, useState, useEffect } from "react";
 import data from "../../public/data/sliderimages.js";
 import "../assets/Slider.css";
+import "../assets/AnimationClick.css";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 function HomepageSlider() {
   const [currentImage, setCurrentImage] = useState(data[0]);
+  const [wobble, setWobble] = useState(0)
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const nextIndex = (data.indexOf(currentImage) + 1) % data.length;
       setCurrentImage(data[nextIndex]);
+      setWobble(1);
     }, 15000);
 
     return () => clearInterval(intervalId);
@@ -19,12 +22,14 @@ function HomepageSlider() {
     const currentIndex = data.indexOf(currentImage);
     const previousIndex = currentIndex === 0 ? data.length - 1 : currentIndex - 1;
     setCurrentImage(data[previousIndex]);
+    setWobble(1);
   }
 
   function handleNext() {
     const currentIndex = data.indexOf(currentImage);
     const nextIndex = (currentIndex + 1) % data.length;
     setCurrentImage(data[nextIndex]);
+    setWobble(1);
   }
 
   return (
@@ -34,7 +39,10 @@ function HomepageSlider() {
         {data && data.length > 0 ? (
           <div className="slider-wrapper flex-center" >
             
-              <button className="arrow-button-left-arrow flex-center" onClick={handlePrevious}>
+              <button className="arrow-button-left-arrow flex-center" 
+              onClick={handlePrevious}
+              onAnimationEnd={() => setWobble(0)}
+              >
                 <SlArrowLeft className="custom-icon"/>
               </button>
             
@@ -45,7 +53,7 @@ function HomepageSlider() {
               </h2>
               <p className="slide-in-left">{currentImage.p_text}</p>
               { currentImage.button_text != "" ?
-              <button className="slider-item-button"><a href={currentImage.link}>{currentImage.button_text}</a></button>
+              <button className="slider-item-button target-animation"><a href={currentImage.link}>{currentImage.button_text}</a></button>
               : ""
               }
               
