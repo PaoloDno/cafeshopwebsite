@@ -12,7 +12,7 @@ const sliderimage = [
   },
   {
     id: 2,
-    background_img: "../public/images/heroslider/coffeshopinterior.jpg",
+    background_img: "public/images/heroslider/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/heroslider/discount.jpg",
     header_text: "Discount on the Web.",
     header_text_card: "Welcome to Cafeko",
