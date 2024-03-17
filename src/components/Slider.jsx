@@ -1,13 +1,14 @@
 import React, { Fragment, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import data from "../../public/data/sliderimages.js";
 import "../assets/Slider.css";
 import "../assets/AnimateClick.css";
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 function HomepageSlider() {
   const [currentImage, setCurrentImage] = useState(data[0]);
   const [wobble, setWobble] = useState(0);
-  const [bussyfade, setBussyfade] = useState(0)
+  const [bussyfade, setBussyfade] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -35,6 +36,7 @@ function HomepageSlider() {
     setWobble(1);
     setBussyfade(1);
   }
+
   function onAnimationEnds() {
     setBussyfade(0);
     setWobble(0);
@@ -42,72 +44,72 @@ function HomepageSlider() {
 
   return (
     <Fragment>
-      <div className="slider-container cover-background" 
-        style={{ backgroundImage: `url("${currentImage.background_img}")` }}>
+      <div
+        className="slider-container cover-background"
+        style={{ backgroundImage: `url("${currentImage.background_img}")` }}
+      >
         {data && data.length > 0 ? (
-          <div className="slider-wrapper flex-center" >
-            
-              <button className="arrow-button-left-arrow flex-center target-animation" 
+          <div className="slider-wrapper flex-center">
+            <button
+              className="arrow-button-left-arrow flex-center target-animation"
               onClick={handlePrevious}
               onAnimationEnd={onAnimationEnds}
-              >
-                <SlArrowLeft className="custom-icon"/>
-              </button>
-            
-            <div className="slider-item target-animation-bussyfade" 
-            bussyfade={bussyfade}>
+            >
+              <BsArrowLeft className="custom-icon" />
+            </button>
+            <div
+              className="slider-item target-animation-bussyfade"
+              bussyfade={bussyfade}
+            >
               <div className="hero-background-div"></div>
-              <h2 className="slide-in-left">
-                {currentImage.header_text}
-              </h2>
+              <h2 className="slide-in-left">{currentImage.header_text}</h2>
               <p className="slide-in-left">{currentImage.p_text}</p>
-              { currentImage.button_text != "" ?
-                <button className="slider-item-button target-animation-wobble"
-                wobble={wobble}
-                onClick={() => setWobble(1)}
-                onAnimationEnd={onAnimationEnds}
+              {currentImage.button_text && (
+                <button
+                  className="slider-item-button target-animation-wobble"
+                  wobble={wobble}
+                  onClick={() => setWobble(1)}
+                  onAnimationEnd={onAnimationEnds}
                 >
-                  <a href={currentImage.link}>{currentImage.button_text}
-                  </a>
+                  <Link to={currentImage.link}>{currentImage.button_text}</Link>
                 </button>
-              : ""
-              }
-              
+              )}
             </div>
-            
-              <button className="arrow-button-right-arrow flex-center" 
-              onClick={handleNext}>
-                <SlArrowRight className="custom-icon"/>
-              </button>
-            
+            <button
+              className="arrow-button-right-arrow flex-center"
+              onClick={handleNext}
+            >
+              <BsArrowRight className="custom-icon" />
+            </button>
           </div>
         ) : (
           <div className="slider-wrapper-default">
             <h3>No data found!</h3>
-            <p>{datum.p_text}</p>
-            <button><a href={datum.link}>Order Now</a></button>
+            <p>{data[0].p_text}</p>
+            <button>
+              <Link to={data[0].link}>Opps</Link>
+            </button>
           </div>
         )}
       </div>
       <div className="non-slider-container" id="non-slider-container">
-        
-          {data.map((datum, index) => (
-              <div className="card flex-center cover-background" key={index} 
-              style={{backgroundImage: `url("${datum.bg_card_images}")`, 
-              display: index === 0 ? "none" : "flex" 
-              }}>
-                <div className="card-description flex-center">
-                <h2>{datum.header_text}</h2>
-                <button className="card-button">
-                  <a href={datum.link}>
-                    {datum.button_text}
-                  </a></button>
-                </div>
-                
-              </div> 
-          ))}
-  
-        
+        {data.map((datum, index) => (
+          <div
+            className="card flex-center cover-background"
+            key={index}
+            style={{
+              backgroundImage: `url("${datum.bg_card_images}")`,
+              display: index === 0 ? "none" : "flex",
+            }}
+          >
+            <div className="card-description flex-center">
+              <h2>{datum.header_text}</h2>
+              <button className="card-button">
+                <Link to={datum.link}>{datum.button_text}</Link>
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </Fragment>
   );

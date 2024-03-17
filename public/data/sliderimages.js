@@ -2,7 +2,7 @@ const sliderimage = [
   
   {
     id: 1,
-    background_img: "/cafeshopwebsite/public/images/heroslider/coffeshopinterior.jpg",
+    background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/heroslider/coffeeandtable.jpg",
     header_text: "WELCOME TO Cafeko!",
     header_text_card: "Welcome to Cafeko Experience greatness in a cup",
@@ -12,7 +12,7 @@ const sliderimage = [
   },
   {
     id: 2,
-    background_img: "/cafeshopwebsite/public/images/heroslider/coffeshopinterior.jpg ",
+    background_img: "public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/heroslider/discount.jpg",
     header_text: "Discount on the Web.",
     header_text_card: "Welcome to Cafeko",
@@ -22,7 +22,7 @@ const sliderimage = [
   },
   {
     id: 3,
-    background_img: "/cafeshopwebsite/public/images/heroslider/coffeshopinterior.jpg ",
+    background_img: "public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/heroslider/t-shirts.jpg",
     header_text: "Elevate your lifestyle.",
     header_text_card: "Welcome to Cafeko",
@@ -32,7 +32,7 @@ const sliderimage = [
   },
   {
     id: 4,
-    background_img: "/cafeshopwebsite/public/images/heroslider/coffeshopinterior.jpg ",
+    background_img: "../../public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/heroslider/joinus.jpg",
     header_text: "Discover. Connect. Brew",
     header_text_card: "Welcome to Cafeko",
@@ -42,7 +42,7 @@ const sliderimage = [
   },
   {
     id: 5,
-    background_img: "/cafeshopwebsite/public/images/heroslider/coffeshopinterior.jpg ",
+    background_img: "../public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/heroslider/signup.jpg",
     header_text: "Sign Up! for Rewards",
     header_text_card: "Welcome to Cafeko",

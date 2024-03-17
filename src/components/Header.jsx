@@ -21,13 +21,13 @@ function Header() {
       <div className="navlinks">
 
         <span className="navlinks-left">
-          <Link to="/cafeshopwebsite/order">Menu</Link>
-          <Link to="/cafeshopwebsite/">Goodies</Link>
-          <Link to="/cafeshopwebsite/">About</Link>
+          <Link to="/order">Menu</Link>
+          <Link to="/">Goodies</Link>
+          <Link to="/">About</Link>
         </span>
         <span className="navlinks-right">
-          <Link to="/cafeshopwebsite/"><button type="button" className="btn btn-secondary">Login</button></Link>
-          <Link to="/cafeshopwebsite/"><button className="btn btn-outline-secondary">Join</button></Link>
+          <Link to="/"><button type="button" className="btn btn-secondary">Login</button></Link>
+          <Link to="/"><button className="btn btn-outline-secondary">Join</button></Link>
         </span>
       </div>
       <button className="nav-btn nav-close-btn">
