@@ -13,7 +13,7 @@ const sliderimage = [
   {
     id: 2,
     background_img: "public/images/coffeshopinterior.jpg",
-    bg_card_images: "/cafeshopwebsite/public/images/heroslider/discount.jpg",
+    bg_card_images: "/images/heroslider/discount.jpg",
     header_text: "Discount on the Web.",
     header_text_card: "Welcome to Cafeko",
     p_text: "Indulge Yourself with Our Brown and Black Coffee Selection at Cafeko",
@@ -43,7 +43,7 @@ const sliderimage = [
   {
     id: 5,
     background_img: "../public/images/coffeshopinterior.jpg",
-    bg_card_images: "/cafeshopwebsite/public/images/heroslider/signup.jpg",
+    bg_card_images: "./images/heroslider/signup.jpg",
     header_text: "Sign Up! for Rewards",
     header_text_card: "Welcome to Cafeko",
     p_text: "Get exclusive Seasonal Rewards and Promos, and many more! using the Web or App",
