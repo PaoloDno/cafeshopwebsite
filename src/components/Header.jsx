@@ -13,31 +13,31 @@ function Header() {
   }
 
   return(
-   <header>
-    <a href="/">
-    <h3>CafeKo</h3>
-    </a>
+    <header>
+    <Link to="/">
+      <h3>CafeKo</h3>
+    </Link>
     <nav ref={navRef}>
       <div className="navlinks">
-      
-      <span className="navlinks-left">
-        <a href="/cafeshopwebsite/order">Menu</a>
-        <a href="/cafeshopwebsite/">Goodies</a>
-        <a href="/cafeshopwebsite/">About</a>
-      </span>
-      <span className="navlinks-right">
-        <a href="/cafeshopwebsite/"><button type="button" className="btn btn-secondary">Login</button></a>
-        <a href="/cafeshopwebsite/"><button className="btn btn-outline-secondary">Join</button></a>
-      </span>
-      </div> 
+
+        <span className="navlinks-left">
+          <Link to="/cafeshopwebsite/order">Menu</Link>
+          <Link to="/cafeshopwebsite/">Goodies</Link>
+          <Link to="/cafeshopwebsite/">About</Link>
+        </span>
+        <span className="navlinks-right">
+          <Link to="/cafeshopwebsite/"><button type="button" className="btn btn-secondary">Login</button></Link>
+          <Link to="/cafeshopwebsite/"><button className="btn btn-outline-secondary">Join</button></Link>
+        </span>
+      </div>
       <button className="nav-btn nav-close-btn">
         <FaTimes onClick={showNavBar} className="custom-icon" />
       </button>
     </nav>
-      <button className="nav-btn nav-close-btn">
-        <FaBars onClick={showNavBar} className="custom-icon" />
-      </button>
-   </header>
+    <button className="nav-btn nav-close-btn">
+      <FaBars onClick={showNavBar} className="custom-icon" />
+    </button>
+  </header>
   )
 }
 

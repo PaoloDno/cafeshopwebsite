@@ -108,7 +108,7 @@
   overflow: hidden;
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 510;
   font-style: normal;
 }
 .slider-container .slider-wrapper  .slider-item .hero-background-div{
@@ -200,6 +200,7 @@
   background-color: #382E1D;
   width: 100%;
   height: 50%;
+  font-weight: 400;
   color: var(--secondaryclr);
 }
 
@@ -282,10 +283,10 @@
     background-color: hsla(39, 33%, 17%, 0.5);
     color: var(--textclr);
     font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
     font-size: 1.5rem;
-    font-weight: bold;
+    
     color: var(--textclr);
     text-align: left;
     margin-top: 20px;

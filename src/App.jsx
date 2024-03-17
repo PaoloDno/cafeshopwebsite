@@ -8,10 +8,10 @@ function App() {
   
   return (
     <Router>
-      <Routes>
-        <Route exact path="/cafeshopwebsite/" element={<Home />} /> 
-        <Route exact path="/cafeshopwebsite/order" element={<Order />} /> 
-        
+      <Routes basename="./cafeshopwebsite">
+        <Route exact path="/" element={<Home />} /> 
+        <Route exact path="/order" element={<Order />} /> 
+        <Route path="*" element={<NotFound />} />
       </Routes>
   </Router>
   )
