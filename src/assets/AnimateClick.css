@@ -1,5 +1,5 @@
 
-.target-animation[wobble='1'] {
+.target-animation-wobble[wobble='1'] {
   animation: wobble 1s 1;
 }
 
@@ -16,4 +16,41 @@
   100% {
     transform: rotate(0deg);
   }
+}
+
+.target-animation-bussyfade[bussyfade='1'] {
+  display: block;
+  animation: bussyfade 1s 1;
+}
+
+@keyframes bussyfade {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  20% {
+    opacity: 0.3;
+    transform: translateX(20%);
+  }
+  30% {
+    opacity: 0.3;
+    transform: translateX(12%);
+  }
+  40% {
+    opacity: 0.3;
+    transform: translateX(8%);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(5%);
+  }
+  75% {
+    opacity: 0.5;
+    transform: translateX(1%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
 }

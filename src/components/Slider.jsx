@@ -1,18 +1,20 @@
 import React, { Fragment, useState, useEffect } from "react";
 import data from "../../public/data/sliderimages.js";
 import "../assets/Slider.css";
-import "../assets/AnimationClick.css";
+import "../assets/AnimateClick.css";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 function HomepageSlider() {
   const [currentImage, setCurrentImage] = useState(data[0]);
-  const [wobble, setWobble] = useState(0)
+  const [wobble, setWobble] = useState(0);
+  const [bussyfade, setBussyfade] = useState(0)
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const nextIndex = (data.indexOf(currentImage) + 1) % data.length;
       setCurrentImage(data[nextIndex]);
       setWobble(1);
+      setBussyfade(1);
     }, 15000);
 
     return () => clearInterval(intervalId);
@@ -23,6 +25,7 @@ function HomepageSlider() {
     const previousIndex = currentIndex === 0 ? data.length - 1 : currentIndex - 1;
     setCurrentImage(data[previousIndex]);
     setWobble(1);
+    setBussyfade(1);
   }
 
   function handleNext() {
@@ -30,6 +33,11 @@ function HomepageSlider() {
     const nextIndex = (currentIndex + 1) % data.length;
     setCurrentImage(data[nextIndex]);
     setWobble(1);
+    setBussyfade(1);
+  }
+  function onAnimationEnds() {
+    setBussyfade(0);
+    setWobble(0);
   }
 
   return (
@@ -39,27 +47,36 @@ function HomepageSlider() {
         {data && data.length > 0 ? (
           <div className="slider-wrapper flex-center" >
             
-              <button className="arrow-button-left-arrow flex-center" 
+              <button className="arrow-button-left-arrow flex-center target-animation" 
               onClick={handlePrevious}
-              onAnimationEnd={() => setWobble(0)}
+              onAnimationEnd={onAnimationEnds}
               >
                 <SlArrowLeft className="custom-icon"/>
               </button>
             
-            <div className="slider-item">
+            <div className="slider-item target-animation-bussyfade" 
+            bussyfade={bussyfade}>
               <div className="hero-background-div"></div>
               <h2 className="slide-in-left">
                 {currentImage.header_text}
               </h2>
               <p className="slide-in-left">{currentImage.p_text}</p>
               { currentImage.button_text != "" ?
-              <button className="slider-item-button target-animation"><a href={currentImage.link}>{currentImage.button_text}</a></button>
+                <button className="slider-item-button target-animation-wobble"
+                wobble={wobble}
+                onClick={() => setWobble(1)}
+                onAnimationEnd={onAnimationEnds}
+                >
+                  <a href={currentImage.link}>{currentImage.button_text}
+                  </a>
+                </button>
               : ""
               }
               
             </div>
             
-              <button className="arrow-button-right-arrow flex-center" onClick={handleNext}>
+              <button className="arrow-button-right-arrow flex-center" 
+              onClick={handleNext}>
                 <SlArrowRight className="custom-icon"/>
               </button>
             
