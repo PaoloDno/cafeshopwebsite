@@ -5,7 +5,6 @@ import "../assets/Menu.css"
 import items from "../../public/data/menulist.js";
 import Header  from './Header.jsx';
 
-
 const allCategories = ['All', ...new Set(items.map((item) => item.category))];
 
 function Orderp() {

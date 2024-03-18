@@ -54,13 +54,14 @@
   color: var(--textclr)
 }
 
-.section-center{
+.section_center{
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
   overflow-x: scroll;
   width: 100vw;
+  height: 100vh;
   scrollbar-width: 25px;
   -ms-overflow-style: none;
 
@@ -83,18 +84,30 @@
   scrollbar-color: var(--manclrlgt) var(--textclr);
 }
 
+.menu_item_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21%, auto)); /* Changed from 'auto()' to 'repeat(auto-fit, minmax(21%, auto))' */
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 80vw;
+  justify-content: flex-start;
+  margin: 1rem;
+  gap: 2rem
+}
+
+
 .menu-item {
   display: flex;
-  padding: 1rem;
-  justify-content: space-around;
-  align-items: flex-start;
-  min-width: 200px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
   height: 420px;
-  padding: 1rem;
+  padding: 0.5rem;
   flex-direction: column;
   overflow: hidden;
   background-color: #E6BE8A;
-  margin: 1rem;
+  margin: 0.25rem;
   border-radius: 25px;
 }
 .menu-item img{
@@ -119,19 +132,51 @@
   max-height: 30%;
   font-size: 0.75rem;
 }
-
+.section_center button {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  padding: 0.5rem;
+  z-index: 2;
+  background: transparent;
+  border: none;
+}
+.section_center button .menu-custom-icon{
+  display: flex;
+  height: 100px;
+  width: 100px;
+  padding: 0.5rem;
+  z-index: 2;
+  border: none;
+}
 
 @media only screen and (max-width: 1024px){
-  .section-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    overflow: hidden;
+  .section_center button{
+    display: none;
   }
-  .menu-item {
+  .section_center{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90vw;
+    height: auto;
+    scrollbar-width: 10px;
+  }
+  .menu_item_section {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
     justify-content: center;
     align-items: center;
-    min-width: 40vw;
+    place-items: center;
+  }
+  .menu-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42vw;
     height: 80vw;
     font-size: 0.75rem;
     .item-info h4 {
@@ -159,7 +204,7 @@
     overflow-y: hidden;
     scrollbar-width: 15px;
     -ms-overflow-style: none;
-
+    width: 90vw;
     ::-webkit-scrollbar {
     width: 10px;
     }
@@ -180,7 +225,9 @@
     }
     .btn-container {
       flex-direction: row;
+      justify-content: flex-start;
       margin: 0.5rem;
       margin-bottom: 2rem;
     }
+    
 }
