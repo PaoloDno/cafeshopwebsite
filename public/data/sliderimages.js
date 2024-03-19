@@ -2,29 +2,29 @@ const sliderimage = [
   
   {
     id: 1,
-    background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
+    background_img: "cafeshopwebsite/public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/heroslider/coffeeandtable.jpg",
-    header_text: "WELCOME TO Cafeko!",
-    header_text_card: "Welcome to Cafeko Experience greatness in a cup",
-    p_text: "Experience greatness in a cup.",
-    link: "#non-slider-container",
-    button_text: "SEE MORE..."
+    header_text: "Best Espresso in Town",
+    header_text_card: "Try our bestseller all black and darker than black, Espresso",
+    p_text: "Experience Greatness in a Cup",
+    link: "/order",
+    button_text: "GET IT NOW"
   },
   {
     id: 2,
-    background_img: "public/images/coffeshopinterior.jpg",
+    background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/discount.jpg",
-    header_text: "Discount on the Web.",
+    header_text: "We got the fresh beans and more!",
     header_text_card: "Welcome to Cafeko",
-    p_text: "Indulge Yourself with Our Brown and Black Coffee Selection at Cafeko",
+    p_text: "Indulge Yourself with Our Brown and Black Coffee Selection at Cafeko, and we have snacks too",
     link: "/order",
     button_text: "ORDER NOW"
   },
   {
     id: 3,
-    background_img: "public/images/coffeshopinterior.jpg",
+    background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/t-shirts.jpg",
-    header_text: "Elevate your lifestyle.",
+    header_text: "Elevate your Lifestyle.",
     header_text_card: "Welcome to Cafeko",
     p_text: "Cafeko is more than just a coffee experience. It's a lifestyle—an aesthetic that celebrates the beauty of simple pleasures and the joy of everyday rituals",
     link: "/",
@@ -32,7 +32,7 @@ const sliderimage = [
   },
   {
     id: 4,
-    background_img: "../../public/images/coffeshopinterior.jpg",
+    background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/joinus.jpg",
     header_text: "Discover. Connect. Brew",
     header_text_card: "Welcome to Cafeko",
@@ -42,7 +42,7 @@ const sliderimage = [
   },
   {
     id: 5,
-    background_img: "../public/images/coffeshopinterior.jpg",
+    background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
     bg_card_images: "/cafeshopwebsite/public/images/signup.jpg",
     header_text: "Sign Up! for Rewards",
     header_text_card: "Welcome to Cafeko",

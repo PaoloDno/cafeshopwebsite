@@ -34,7 +34,7 @@
   width: 100vw;
   transition: backgound-image 1s ease-in-out;
   overflow: hidden;
-  background-color: #ecddc9b9;
+  background-color: #e7ac5f45;
   background-blend-mode: soft-light;
 }
 .slider-wrapper {
@@ -117,10 +117,11 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #E6BE8A;
+  background: linear-gradient( hsla(41, 51%, 59%, 0.678) 70%,transparent);
   transform: rotate(-45deg);
   transform-origin: -15% 95%;
 }
+
 .slider-container .slider-wrapper  .slider-item p {
   position:absolute;
   z-index: 2;

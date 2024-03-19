@@ -2,7 +2,7 @@ import React from 'react';
 
 const Categories = ({ categories, filterItems }) => {
   return (
-    <div className="btn-container flex-center">
+    <div className="btn-container">
       {categories.map((category, index) => {
         return (
           <button

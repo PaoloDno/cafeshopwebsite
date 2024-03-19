@@ -70,6 +70,7 @@ function HomepageSlider() {
                   wobble={wobble}
                   onClick={() => setWobble(1)}
                   onAnimationEnd={onAnimationEnds}
+                  type="button"
                 >
                   <Link to={currentImage.link}>{currentImage.button_text}</Link>
                 </button>

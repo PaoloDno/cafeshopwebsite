@@ -8,7 +8,7 @@ const NotFound = () => {
     const timer = setTimeout(() => {
       
       setRedirect(true);
-    }, 2500); 
+    }, 100); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -16,7 +16,7 @@ const NotFound = () => {
   // If redirect is true, navigate to the home page
   return redirect ? <Navigate to="/" /> : (
     <div className='flex-center' style={{ flexDirection: "column" }}>
-      <h1>404 - Not Found</h1>
+      <h1>Shortly redirect to homapege</h1>
       <p>The page you're looking for does not exist.</p>
       <p>Shortly redirect to homapege</p>
     </div>
