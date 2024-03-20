@@ -14,7 +14,7 @@ const NotFound = () => {
   }, []);
 
   // If redirect is true, navigate to the home page
-  return redirect ? <Navigate to="/" /> : (
+  return redirect ? <Navigate to="/cafeshopwebsite/" /> : (
     <div className='flex-center' style={{ flexDirection: "column" }}>
       <h1>Shortly redirect to homapege</h1>
       <p>The page you're looking for does not exist.</p>
