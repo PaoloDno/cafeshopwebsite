@@ -14,7 +14,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Coffee",
     "price": 60,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu.jpg",
+    "img": "public/images/menu_pic/menu.jpg",
     "desc": "A coffee drink made with espresso and steamed milk."
   },
   {
