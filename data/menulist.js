@@ -14,7 +14,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Coffee",
     "price": 60,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu.jpg",
+    "img": "public/images/menu_pic/menu.jpg",
     "desc": "A coffee drink made with espresso and steamed milk."
   },
   {
@@ -41,7 +41,7 @@ const menulist = [
     "category": "Food",
     "sub_category": "Sandwiches",
     "price": 40,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu5.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu12.jpg",
     "desc": "A delicious sandwich made with sliced chicken or turkey, bacon, lettuce, tomato, and mayonnaise."
   },
   {
@@ -50,7 +50,7 @@ const menulist = [
     "category": "Desserts",
     "sub_category": "Cakes",
     "price": 75,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu5.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu10.jpg",
     "desc": "A creamy cheesecake with a graham cracker crust, topped with fresh strawberries."
   },
   {
@@ -59,7 +59,7 @@ const menulist = [
     "category": "Sides",
     "sub_category": "Appetizers",
     "price": 20,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu5.jpg",
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu11.jpg",
     "desc": "Deep-fried potato strips seasoned with salt, served hot."
   },
   {
@@ -79,6 +79,15 @@ const menulist = [
     "price": 80,
     "img": "/cafeshopwebsite/public/images/menu_pic/menu6.jpg",
     "desc": "Overloaded with chocolate goodness and nuts on top."
+  },
+  {
+    "id": 9,
+    "name": "Milktea",
+    "category": "Drinks",
+    "sub_category": "Milktea",
+    "price": 80,
+    "img": "/cafeshopwebsite/public/images/menu_pic/menu9.jpg",
+    "desc": "Creamy milktea with special booba pearls"
   }
 ]
 
