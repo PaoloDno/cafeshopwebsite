@@ -10,6 +10,7 @@
   --manclrlgt: #804A00;
   --secondaryclr: #E6BE8A;
   --textclr: #F5F5F5;
+  --textcnt: rgb(236, 180, 25);
 }
 
 .flex-center {
@@ -30,12 +31,13 @@
   z-index: 1;
   flex-direction: row;
   flex: 1;
-  height: 90vh;
+  height: 75vh;
   width: 100vw;
   transition: backgound-image 1s ease-in-out;
   overflow: hidden;
   background-color: #e7ac5f45;
   background-blend-mode: soft-light;
+  line-height: 1.6;
 }
 .slider-wrapper {
   z-index: 1;
@@ -103,7 +105,9 @@
   font-size: 6rem;
   text-align: center;
   margin-top: 10px;
-  text-shadow: 12px 8px 3px #ecddc9e5; 
+  color: var(--textcnt);
+  text-shadow:12px 8px 3px #0c0c0be5,
+  2px -2px 13px #0c0c0be5; 
   padding: 1rem;
   overflow: hidden;
   font-family: "Oswald", sans-serif;
@@ -117,7 +121,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: linear-gradient( hsla(41, 51%, 59%, 0.678) 70%,transparent);
+  background: linear-gradient( transparent, hsla(41, 51%, 59%, 0.678) 70%,transparent);
   transform: rotate(-45deg);
   transform-origin: -15% 95%;
 }
@@ -137,7 +141,10 @@
 }
 
 .slider-container .slider-wrapper .slider-item .slider-item-button:hover {
-  background-color: #e29a56c7;
+  background-color: var(--textcnt);
+  a {
+    color: var(--mainclr);
+  }
 }
 
 
@@ -145,20 +152,21 @@
   z-index: 3;
   display: flex;
   position: absolute;
-  bottom: 50px;
+  bottom: 220px;
   width: 250px;
   height: 60px;
-  background-color: var(--textclr);
+  background-color: var(--mainclr);
   transition: background-color 0.5s ease-in-out;
   border: 2px solid var(--mainclr);
-  color: #000;
   justify-content: center;
   align-items: center;
 }
 .slider-container .slider-wrapper  .slider-item .slider-item-button a {
   text-decoration: none;
-  color: var(--mainclr);
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  color: var(--textcnt);
+  font-size: 1.75rem;
 }
 
 
@@ -171,55 +179,70 @@
   display: grid;
   overflow: hidden;
   width: 100vw;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 1rem;
   place-items: center;
   justify-content: center;
   align-items: center;
   flex: 1;
+  padding: 2rem 0 0;
 }
+
 .non-slider-container .card {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   min-height: 60vh;
   max-height: 60vh;
-  width: 45vw;
+  width: 21vw;
+  max-width: 22vw;
   overflow: hidden;
   background-blend-mode: screen;
-  border-radius: 1rem;
   margin: 0.5rem;
   flex: 1;
+  padding: 10rem 0 0;
+  
+  transition: transform 0.5s ease-in-out;
 }
 
-
+.non-slider-container .card:hover {
+  transform: translateY(-1rem);
+}
 
 .non-slider-container .card .card-description {
   margin-top: auto;
-  padding: 1rem;
+  text-align: center;
+  padding: 2.5rem;
   flex-direction: column;
-  background-color: #382E1D;
+  background: 
+  linear-gradient(
+  hsla(0, 0%, 0%, 0),  
+  hsla(39, 64%, 56%, 0.55) 40%,
+  hsla(41, 51%, 59%, 0.678),
+  hsla(41, 85%, 63%, 0.979)
+  );
   width: 100%;
   height: 50%;
   font-weight: 400;
-  color: var(--secondaryclr);
+  line-height: 1.6;
+  color: var(--mainclr);
 }
 
 .non-slider-container .card .card-description .card-button {
-  display: block;
   padding: 1rem;
   font-size: 1rem;
-  background-color: var(--secondaryclr);
+  background-color: var(--mainclr);
   border: none;
-  border-radius: 1rem;
-  width: 100%;
+  width: 200px;
+  height: 50px;
 }
 .non-slider-container .card .card-description .card-button a {
   text-decoration: none;
-  color: var(--mainclr);
+  color: var(--textcnt);
+  font-weight: 900;
 }
 .non-slider-container .card {
-  background-color: #d31b528a;
+  background-color: #8b5206e5;
   backdrop-filter: blur(10px); 
 }
 
@@ -233,8 +256,9 @@
   .slider-container .slider-wrapper  .slider-item h2{
     font-size: 4rem;
     top: 200px;
-    text-shadow: 4px 4px 2px #ecddc9;
+    text-shadow: 4px 4px 2px #301f09;
     font-weight: 500;
+    color: rgb(236, 180, 25);
   }
   .slider-container .slider-wrapper .slider-item {
     width: 100vw;
@@ -244,7 +268,9 @@
     opacity: 0.6;
   }
   .slider-container .slider-wrapper  .slider-item .slider-item-button{
-    background-color: #000;
+    background-color: #00000054;
+    bottom: 20%;
+    z-index: 5;
   }
   .slider-container .slider-wrapper  .slider-item .slider-item-button a{
     color: var(--textclr);
@@ -272,6 +298,7 @@
     z-index: 1;
     flex-direction: column;
     width: 90vw;
+    max-width: none;
     min-height: 80vh;
     overflow: hidden;
     background-size: cover;
@@ -281,18 +308,17 @@
   }
   .non-slider-container .card h2{
     display: flex;
-    background-color: hsla(39, 33%, 17%, 0.5);
     color: var(--textclr);
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Oswald", serif;
     font-weight: 800;
     font-style: normal;
     font-size: 1.5rem;
-    
     color: var(--textclr);
     text-align: left;
     margin-top: 20px;
-    text-shadow: 4px 4px 2px #e6be8a8a; 
+    text-shadow: 1px 1px 2px #e6be8a8a; 
     padding: 1rem;
     max-width: 70vw;
+   
   }
 }

@@ -105,7 +105,7 @@ function HomepageSlider() {
           >
             <div className="card-description flex-center">
               <h2>{datum.header_text}</h2>
-              <button className="card-button">
+              <button className="card-button flex-center">
                 <Link to={datum.link}>{datum.button_text}</Link>
               </button>
             </div>
