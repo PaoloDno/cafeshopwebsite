@@ -13,7 +13,7 @@ const sliderimage = [
   {
     id: 2,
     background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
-    bg_card_images: "images/coffeebeans.jpg",
+    bg_card_images: "https://github.com/PaoloDno/cafeshopwebsite/blob/main/src/components/images/coffeebeans.jpg",
     header_text: "We got the fresh beans and more!",
     header_text_card: "Welcome to Cafeko",
     p_text: "Indulge Yourself with Our Brown and Black Coffee Selection at Cafeko, and we have snacks too",
@@ -23,7 +23,7 @@ const sliderimage = [
   {
     id: 3,
     background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
-    bg_card_images: "images/t-shirts.jpg",
+    bg_card_images: "src/components/images/t-shirts.jpg",
     header_text: "Elevate your Lifestyle.",
     header_text_card: "Welcome to Cafeko",
     p_text: "Cafeko is more than just a coffee experience. It's a lifestyle—an aesthetic that celebrates the beauty of simple pleasures and the joy of everyday rituals",
@@ -33,7 +33,7 @@ const sliderimage = [
   {
     id: 4,
     background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
-    bg_card_images: "images/joinus.jpg",
+    bg_card_images: "src/components/images/joinus.jpg",
     header_text: "Discover. Connect. Brew",
     header_text_card: "Welcome to Cafeko",
     p_text: "We're on a mission to redefine brown coffee. Join us to discover our passion, connect with our community, and brew something extraordinary together.",
@@ -43,7 +43,7 @@ const sliderimage = [
   {
     id: 5,
     background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
-    bg_card_images: "images/signup.jpg",
+    bg_card_images: "src/components/images/joinussignup.jpg",
     header_text: "Sign Up! for Rewards",
     header_text_card: "Welcome to Cafeko",
     p_text: "Get exclusive Seasonal Rewards and Promos, and many more! using the Web or App",

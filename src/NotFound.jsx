@@ -8,7 +8,7 @@ const NotFound = () => {
     const timer = setTimeout(() => {
       
       setRedirect(true);
-    }, 100); 
+    }, 1500); 
 
     return () => clearTimeout(timer);
   }, []);
