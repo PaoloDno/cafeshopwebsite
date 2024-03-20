@@ -5,6 +5,13 @@ import "../assets/Slider.css";
 import "../assets/AnimateClick.css";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
+import bg_img from './images/coffeshopinterior.jpg';
+import bg_card1 from './images/coffeebeans.jpg'; 
+import bg_card2 from './images/t-shirts.jpg';
+import bg_card3 from './images/joinus.jpg';
+import bg_card4 from './images/signup.jpg';
+
+
 function HomepageSlider() {
   const [currentImage, setCurrentImage] = useState(data[0]);
   const [wobble, setWobble] = useState(0);
@@ -46,7 +53,7 @@ function HomepageSlider() {
     <Fragment>
       <div
         className="slider-container cover-background"
-        style={{ backgroundImage: `url("${currentImage.background_img}")` }}
+        style={{ backgroundImage: `url(${bg_img})` }}
       >
         {data && data.length > 0 ? (
           <div className="slider-wrapper flex-center">
@@ -99,10 +106,10 @@ function HomepageSlider() {
             className="card flex-center cover-background"
             key={index}
             style={{
-              backgroundImage: `url("${datum.bg_card_images}")`,
+              backgroundImage: `url('${datum.bg_card_images}')`,
               display: index === 0 ? "none" : "flex",
             }}
-          >
+          > 
             <div className="card-description flex-center">
               <h2>{datum.header_text}</h2>
               <button className="card-button flex-center">
