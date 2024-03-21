@@ -322,3 +322,36 @@
    
   }
 }
+
+@media only screen and (max-width: 768px) {
+  /* Styles for screens up to 768px width */
+  .slider-container .slider-wrapper .slider-item h2 {
+    font-size: 3rem;
+    top: 150px;
+  }
+  .slider-container .slider-wrapper .slider-item p {
+    font-size: 1.25rem;
+  }
+  .slider-container .slider-wrapper .slider-item .slider-item-button {
+    width: 180px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Styles for screens up to 480px width */
+  .slider-container .slider-wrapper .slider-item h2 {
+    font-size: 2.5rem;
+    top: 100px;
+  }
+  .slider-container .slider-wrapper .slider-item p {
+    font-size: 1rem;
+  }
+  .slider-container .slider-wrapper .slider-item .slider-item-button {
+    width: 150px;
+    height: 35px;
+  }
+  .non-slider-container .card h2 {
+    font-size: 1.2rem;
+  }
+}

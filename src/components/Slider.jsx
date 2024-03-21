@@ -56,7 +56,9 @@ function HomepageSlider() {
         style={{ backgroundImage: `url(${bg_img})` }}
       >
         {data && data.length > 0 ? (
-          <div className="slider-wrapper flex-center">
+          <div className="slider-wrapper flex-center"
+          style={{ backgroundImage: `url(${currentImage.background_img})` }}
+          >
             <button
               className="arrow-button-left-arrow flex-center target-animation"
               onClick={handlePrevious}
