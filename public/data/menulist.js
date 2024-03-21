@@ -50,7 +50,7 @@ const menulist = [
     "category": "Desserts",
     "sub_category": "Cakes",
     "price": 75,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu10.jpg",
+    "img": "./cafeshopwebsite/public/images/menu_pic/menu10.jpg",
     "desc": "A creamy cheesecake with a graham cracker crust, topped with fresh strawberries."
   },
   {
@@ -59,7 +59,7 @@ const menulist = [
     "category": "Sides",
     "sub_category": "Appetizers",
     "price": 20,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu11.jpg",
+    "img": "./public/images/menu_pic/menu11.jpg",
     "desc": "Deep-fried potato strips seasoned with salt, served hot."
   },
   {

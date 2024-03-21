@@ -11,6 +11,8 @@
   --secondaryclr: #E6BE8A;
   --textclr: #F5F5F5;
   --textcnt: rgb(236, 180, 25);
+  --fontsize1: 5rem;
+  --fontsize2: 2.5rem;
 }
 
 .flex-center {
