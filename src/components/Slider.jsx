@@ -57,7 +57,6 @@ function HomepageSlider() {
       >
         {data && data.length > 0 ? (
           <div className="slider-wrapper flex-center"
-          style={{ backgroundImage: `url(${currentImage.background_img})` }}
           >
             <button
               className="arrow-button-left-arrow flex-center target-animation"
@@ -73,6 +72,9 @@ function HomepageSlider() {
               <div className="hero-background-div"></div>
               <h2 className="slide-in-left">{currentImage.header_text}</h2>
               <p className="slide-in-left">{currentImage.p_text}</p>
+              <div className="hero-image-container flex-center">
+                <img className="hero-image"src={currentImage.background_img} />
+              </div>
               {currentImage.button_text && (
                 <button
                   className="slider-item-button target-animation-wobble"
