@@ -5,7 +5,11 @@ import "../assets/Slider.css";
 import "../assets/AnimateClick.css";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
-
+import bg_img from './images/coffeshopinterior.jpg';
+import bg_card1 from './images/coffeebeans.jpg'; 
+import bg_card2 from './images/t-shirts.jpg';
+import bg_card3 from './images/joinus.jpg';
+import bg_card4 from './images/signup.jpg';
 
 
 function HomepageSlider() {

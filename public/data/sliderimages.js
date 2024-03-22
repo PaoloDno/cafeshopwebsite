@@ -1,7 +1,7 @@
 import bg_img from '../../src/components/images/coffeshopinterior.jpg';
 import bg_card1 from '../../src/components/images/coffeebeans.jpg'; 
 import bg_card2 from '../../src/components/images/t-shirts.jpg';
-import bg_card3 from '.../../src/components/images/joinus.jpg';
+import bg_card3 from '../../src/components/images/joinus.jpg';
 import bg_card4 from '../../src/components/images/signup.jpg';
 
 const sliderimage = [
