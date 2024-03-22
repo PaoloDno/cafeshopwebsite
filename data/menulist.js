@@ -1,3 +1,5 @@
+import bg_card1 from '../images/menu_pic/menu10.jpg'; 
+
 const menulist = [
   {
     "id": 0,
@@ -5,7 +7,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Coffee",
     "price": 30,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu8.jpg",
+    "img": bg_card1,
     "desc": "A single shot of strong black coffee made by forcing steam through finely-ground coffee beans."
   },
   {

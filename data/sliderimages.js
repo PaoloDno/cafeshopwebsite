@@ -1,9 +1,15 @@
+import bg_img from '../../src/components/images/coffeshopinterior.jpg';
+import bg_card1 from '../../src/components/images/coffeebeans.jpg'; 
+import bg_card2 from '../../src/components/images/t-shirts.jpg';
+import bg_card3 from '../../src/components/images/joinus.jpg';
+import bg_card4 from '../../src/components/images/signup.jpg';
+
 const sliderimage = [
   
   {
     id: 1,
-    background_img: "bg_img",
-    bg_card_images: "",
+    background_img: bg_img,
+    bg_card_images: bg_card1,
     header_text: "Best Espresso in Town",
     header_text_card: "Try our bestseller all black and darker than black, Espresso",
     p_text: "Experience Greatness in a Cup",
@@ -12,8 +18,8 @@ const sliderimage = [
   },
   {
     id: 2,
-    background_img: "/cafeshopwebsite/public/images/coffeshopinterior.jpg",
-    bg_card_images: "https://github.com/PaoloDno/cafeshopwebsite/components/images/coffeebeans.jpg",
+    background_img: bg_card1,
+    bg_card_images: bg_card1,
     header_text: "We got the fresh beans and more!",
     header_text_card: "Welcome to Cafeko",
     p_text: "Indulge Yourself with Our Brown and Black Coffee Selection at Cafeko, and we have snacks too",
@@ -23,7 +29,7 @@ const sliderimage = [
   {
     id: 3,
     background_img: "/cafeshopwebsite/src/components/images/coffeshopinterior.jpg",
-    bg_card_images: "src/components/images/t-shirts.jpg",
+    bg_card_images: bg_card2,
     header_text: "Elevate your Lifestyle.",
     header_text_card: "Welcome to Cafeko",
     p_text: "Cafeko is more than just a coffee experience. It's a lifestyle—an aesthetic that celebrates the beauty of simple pleasures and the joy of everyday rituals",
