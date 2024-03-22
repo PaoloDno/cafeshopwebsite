@@ -1,3 +1,10 @@
+import bg_img from './images/coffeshopinterior.jpg';
+import bg_card1 from './images/coffeebeans.jpg'; 
+import bg_card2 from './images/t-shirts.jpg';
+import bg_card3 from './images/joinus.jpg';
+import bg_card4 from './images/signup.jpg';
+
+
 const menulist = [
   {
     "id": 0,
@@ -5,7 +12,7 @@ const menulist = [
     "category": "Drinks",
     "sub_category": "Coffee",
     "price": 30,
-    "img": "/cafeshopwebsite/public/images/menu_pic/menu8.jpg",
+    "img": bg_card1,
     "desc": "A single shot of strong black coffee made by forcing steam through finely-ground coffee beans."
   },
   {
