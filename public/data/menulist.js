@@ -1,9 +1,4 @@
-import bg_img from './images/coffeshopinterior.jpg';
-import bg_card1 from './images/coffeebeans.jpg'; 
-import bg_card2 from './images/t-shirts.jpg';
-import bg_card3 from './images/joinus.jpg';
-import bg_card4 from './images/signup.jpg';
-
+import bg_card1 from '../images/menu_pic/menu10.jpg'; 
 
 const menulist = [
   {

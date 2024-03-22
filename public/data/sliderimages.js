@@ -1,15 +1,15 @@
-import bg_img from './images/coffeshopinterior.jpg';
-import bg_card1 from './images/coffeebeans.jpg'; 
-import bg_card2 from './images/t-shirts.jpg';
-import bg_card3 from './images/joinus.jpg';
-import bg_card4 from './images/signup.jpg';
+import bg_img from '../../src/components/images/coffeshopinterior.jpg';
+import bg_card1 from '../../src/components/images/coffeebeans.jpg'; 
+import bg_card2 from '../../src/components/images/t-shirts.jpg';
+import bg_card3 from '.../../src/components/images/joinus.jpg';
+import bg_card4 from '../../src/components/images/signup.jpg';
 
 const sliderimage = [
   
   {
     id: 1,
     background_img: bg_img,
-    bg_card_images: "",
+    bg_card_images: bg_card1,
     header_text: "Best Espresso in Town",
     header_text_card: "Try our bestseller all black and darker than black, Espresso",
     p_text: "Experience Greatness in a Cup",
