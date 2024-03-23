@@ -27,7 +27,7 @@ function Header() {
         </span>
         <span className="navlinks-right">
           <Link to="/cafeshopwebsite/"><button type="button" className="btn btn-secondary">Login</button></Link>
-          <Link to="/cafeshopwebsite/"><button className="btn btn-outline-secondary">Join</button></Link>
+          <Link to="/cafeshopwebsite/hero"><button className="btn btn-outline-secondary">Join</button></Link>
         </span>
       </div>
       <button className="nav-btn nav-close-btn">

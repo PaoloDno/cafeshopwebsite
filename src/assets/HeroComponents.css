@@ -1,0 +1,133 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --mainclr: #382E1D;
+  --mainclrlgt: #804A00;
+  --secondaryclr: #E6BE8A;
+  --textclr: #F5F5F5;
+  --textcnt: #ecb419;
+  --fontsize1: 5rem;
+  --fontsize1_2: 4rem;
+  --fontsize2: 2.5rem;
+  --fontsize2_1: 2.1rem;
+  --fontsize3: 1.75rem;
+  --fontsize4: 1rem;
+
+}
+
+.hero-components-container{
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 0.5rem;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 1rem 0 0;
+}
+.hero-components-container .card{
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48vh;
+  height: 48vh;
+  width: 21vw;
+  max-width: 22vw;
+  overflow: hidden;
+  margin: 0.5rem;
+  flex: 1;
+  padding: 10rem 0 0;
+  background-blend-mode: screen;
+  background-color: #8b5206e5;
+  border-radius: 0;
+  border: 1px solid var(--textcnt);
+}
+.hero-components-container .card::after {
+  background-color: #b6701577;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: (
+  hsla(44, 78%, 27%, 0.753),  
+  hsla(39, 64%, 56%, 0.55) 40%,
+  hsla(41, 51%, 59%, 0.678),
+  hsla(30, 8%, 5%, 0.979)
+  );
+}
+.card-description {
+  font-size: var(--fontsize2_1);
+  margin-top: auto;
+  text-align: center;
+  padding: 2.5rem;
+  flex-direction: column;
+  background-color: #8b5206e5;
+  backdrop-filter: blur(10px); 
+  background: 
+  linear-gradient(
+  hsla(0, 0%, 0%, 0),  
+  hsla(39, 64%, 56%, 0.55) 40%,
+  hsla(41, 51%, 59%, 0.678),
+  hsla(41, 85%, 63%, 0.979)
+  );
+  width: 100%;
+  min-height: 100%;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--mainclr);
+  transition: backdrop-filter 0.5s ease-in-out;
+}
+.card-description:hover {
+  backdrop-filter: blur(0);
+}
+.card-button {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #252525aa;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #252525;
+  transition: background-color 0.75s ease-in;
+}
+.card-button:hover{
+  background-color: #ecb419;
+  a {
+    color: #252525;
+  }
+}
+.card-button a {
+  text-decoration: none;
+  font-weight: 900;
+  font-family: "Oswald", sans-serif;
+  color: var(--textcnt);
+  font-size: var(--fontsize3);
+  transition: color 1s ease-in;
+}
+
+@media screen and (min-width: 650px) and (max-width: 900px) {
+  .hero-components-container{
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-components-container .card {
+    height: 45vh;
+    width: 80%;
+    min-width: 80%;
+  }
+}
+@media screen and (max-width: 649px) {
+  .hero-components-container{
+    grid-template-columns: 1fr;
+  }
+  .hero-components-container .card {
+    height: 65vh;
+    width: 90%;
+    min-width: 90%;
+  }
+}

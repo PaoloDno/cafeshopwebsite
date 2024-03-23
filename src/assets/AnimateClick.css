@@ -20,30 +20,15 @@
 
 .target-animation-bussyfade[bussyfade='1'] {
   
-  animation: bussyfade 1.5s 1;
+  animation: bussyfade 0.5s 1;
 }
 
 @keyframes bussyfade {
   0% {
     opacity: 0;
   }
-  20% {
-    opacity: 0.1;
-  }
-  30% {
-    opacity: 0.2;
-    
-  }
-  40% {
-    opacity: 0.3;
-    
-  }
   50% {
     opacity: 0.5;
-    
-  }
-  75% {
-    opacity: 0.7;
     
   }
   100% {

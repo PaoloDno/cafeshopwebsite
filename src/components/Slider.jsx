@@ -14,6 +14,8 @@ import bg_card4 from './images/signup.jpg';
 
 function HomepageSlider() {
   const [currentImage, setCurrentImage] = useState(data[0]);
+  const [previousImage, setPreviousImage] = useState(data[data.length-1]);
+  const [nextImage, setNextImage] = useState(data[1]);
   const [wobble, setWobble] = useState(0);
   const [bussyfade, setBussyfade] = useState(0);
 

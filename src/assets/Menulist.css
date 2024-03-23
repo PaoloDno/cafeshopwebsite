@@ -1,0 +1,36 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --mainclr: #382E1D;
+  --mainclrlgt: #804A00;
+  --secondaryclr: #E6BE8A;
+  --textclr: #F5F5F5;
+  --textcnt: #ecb419;
+  --fontsize1: 5rem;
+  --fontsize1_2: 4rem;
+  --fontsize2: 2.5rem;
+  --fontsize2_1: 2.1rem;
+  --fontsize3: 1.75rem;
+  --fontsize4: 1rem;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menulist-section {
+  width: 100vw;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+.menu-item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}

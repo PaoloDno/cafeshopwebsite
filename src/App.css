@@ -18,6 +18,14 @@
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  --mainclr: #382E1D;
+  --mainclrlgt: #804A00;
+  --secondaryclr: #E6BE8A;
+  --textclr: #F5F5F5;
+  --textcnt: #ecb419;
+  --fontsize1: 5rem;
+  --fontsize2: 2.5rem;
+  --fontsize3: 1rem;
 }
 
 .body-container {
