@@ -17,6 +17,10 @@
   --fontsize2_1: 2.1rem;
   --fontsize3: 1.75rem;
   --fontsize4: 1rem;
+  --fontsize4_1: 0.8rem;
+  --fontsize5: 0.75rem;
+  --fontsize5_1: 0.5rem;
+  --fontsize5_2: 0.6rem;
 }
 .flex-center{
   display: flex;
@@ -24,13 +28,114 @@
   align-items: center;
 }
 .menulist-section {
-  width: 100vw;
+  flex-direction: column;
+  width: 100%;
   position: relative;
   padding: 20px;
   overflow: hidden;
 }
 .menu-item-list {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-gap: 20px;
+  grid-auto-flow: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 175px;
+  height: 360px;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--secondaryclr);
+  .display-photo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+}
+.item-info {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  .item-info-header{
+    font-size: var(--fontsize4_1);
+  }
+  .item-text-description {
+    font-size: var(--fontsize5);
+  }
+}
+@media screen and (max-width: 900px) {
+  .menu-item-list{
+    width: 95vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+    grid-gap: 3px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-item-card {
+    width: 22vw;
+    height: 320px;
+    .display-photo {
+      height: 120px;
+      width: 120px;
+      border-radius: 0;
+    }
+  }
+  .item-info{
+    height: 60%;
+    margin-top: 1rem;
+    .item-info-header h4{
+      font-size: var(--fontsize4);
+    }
+    .item-text-description {
+      line-height: 0.9;
+      font-size: var(--fontsize5);
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .sticky-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-item-list{
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    grid-gap: 6px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-item-card {
+    width: 29vw;
+    height: 320px;
+    .display-photo {
+      height: 120px;
+      width: 120px;
+      border-radius: 0;
+    }
+  }
+  .item-info{
+    height: 40%;
+    margin-top: 0.25rem;
+    .item-info-header h4{
+      line-height: 0.9;
+      font-size: var(--fontsize5);
+    }
+    .item-text-description {
+      line-height: 0.95;
+      font-size: var(--fontsize5_2);
+    }
+  }
 }

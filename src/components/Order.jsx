@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import Menu from './Menulist.jsx';
 import Categories from './Categor.jsx';
-import "../assets/Menu.css"
 import items from "../../public/data/menulist.js";
 import Header  from './Header.jsx';
-
+import "../assets/Orderpage.css";
 const allCategories = ['All', ...new Set(items.map((item) => item.category))];
 
-function Orderp() {
+function Orderpage() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState(allCategories);
 
@@ -21,20 +20,24 @@ function Orderp() {
   };
 
   return (
-    <div className='order-page flex-center-width-100'>
+    <div className='order-page flex-center'>
       <Header />
-      <section className="menu-section flex-center-width-100">
-        <div className="title">
-          <h2>Our Menu</h2>
-          <div className="underline"></div>
+      <section className="menu-section">
+        <div className="menu-title">
+            <h2>Our Menu</h2>
+            <div className="underline"></div>
         </div>
-        <div className='sticky-bar flex-center-width'>
-        <Categories categories={categories} filterItems={filterItems} />
-        </div>
-        <Menu items={menuItems} />
+        <div className='menu-body'>
+          <div className='sticky-bar'>
+          <Categories categories={categories} filterItems={filterItems} />
+          </div>
+          <div>
+          <Menu items={menuItems} />
+          </div>
+        </div> 
       </section>
     </div>
   );
 }
 
-export default Orderp;
+export default Orderpage;

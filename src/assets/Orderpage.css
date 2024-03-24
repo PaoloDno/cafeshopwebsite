@@ -1,0 +1,134 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --mainclr: #382E1D;
+  --mainclrlgt: #804A00;
+  --secondaryclr: #E6BE8A;
+  --textclr: #F5F5F5;
+  --textcnt: #ecb419;
+  --fontsize1: 5rem;
+  --fontsize1_2: 4rem;
+  --fontsize2: 2.5rem;
+  --fontsize2_1: 2.1rem;
+  --fontsize3: 1.75rem;
+  --fontsize4: 1rem;
+  --fontsize4_1: 0.8rem;
+  --fontsize5: 0.75rem;
+
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-center-width-100 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.order-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column; 
+  background-color: #2c2010fd;
+}
+.menu-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-title {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: var(--textcnt);
+  text-shadow:12px 8px 3px #0c0c0be5,
+  2px -2px 13px #0c0c0be5; 
+}
+.menu-body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.sticky-bar{
+  width: 100%;
+  min-width: 230px;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  height: 50vw;
+  background: linear-gradient(
+    rgba(90, 55, 9, 0.616),
+    hsla(32, 84%, 26%, 0.438)  40%,
+    hsla(1, 1%, 1%, 0 ),
+    hsla(0, 0%, 0%, 0)
+  );
+}
+
+.btn-container-categories{
+  width: 19vw;
+  display: block;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 30vw;
+  margin-bottom: auto;
+}
+.filter-btn-categories{
+  display: flex;
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--fontsize3);
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem auto 1rem auto;
+  flex: 1;
+  background-color: #000000;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #ecebd1b9;
+  transition: background-color 0.75s ease-in;
+  color: var(--textclr);
+}
+.filter-btn-categories:hover {
+  background-color: #ecb419;
+  a {
+    color: #252525;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .menu-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-container-categories{
+    display: grid;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-gap: 2px;
+  }
+  .filter-btn-categories{
+    font-size: var(--fontsize4_1);
+    width: 90px;
+    margin: 0;
+  }
+  .sticky-bar {
+    width: 100vw;
+    height: 200px;
+  }
+}
