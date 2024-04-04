@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root{
+  --primaryColor: hsla(54, 90%, 37%, 0.822);
+  --hoverColor: hsl(46, 79%, 48%);
+  --paleColor: hsla(94, 87%, 79%, 0.356);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 19%);
+  --greyText: hsla(0, 1%, 31%, 0.158);
+  --bgColor: hsl(22, 98%, 37%);
+  --inputColor: hsla(20, 1%, 57%, 0.103);
+  --showMessageColor: hsla(0, 87%, 49%, 0.836);
+
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.74rem;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+.grid{
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+.icon{
+  font-size: var(--h2FontSize);
+  cursor: pointer;
+}
+
+.message{
+  display: none;
+}
+.showMessage{
+  display: block;
+  color: var(--whiteColor);
+  background-color: red;
+  border-radius: 3px;
+  text-align: center;
+}
+.btn-form{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: .8rem 1rem;
+  color: var(--greyText);
+
+}
+
+.btn-form .icon{
+  margin-left: 0.5rem;
+}
+.btn-form:hover{
+  margin-left: 0.5rem;
+}
+
+.registerPage, .loginPage{
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px hsl(0, 0%, 91%);
+  
+  .container{
+    flex-direction: row;
+    height: 80%;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: hsl(0, 0%, 89%);
+    position: relative;
+    
+  }
+  .formDiv{
+    width: 50%;
+    position: relative;
+    flex-direction: column;
+  }
+}
+.videoDiv{
+  display: flex;
+  flex-basis: 50%;
+  position: relative;
+  width: 75%;
+  overflow: hidden;
+  height: 100%;
+  padding: 0 5px;
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+video, .footerDiv{
+  position: absolute;
+}
+
+.textDiv {
+  display: flex;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    color: var(--whiteColor);
+    font-size: 4rem;
+    font-weight: 500px;
+  }
+  p {
+    color: var(--whiteColor);
+  }
+}
+.footerDiv{
+  flex-direction: column;
+  bottom: 20px;
+  padding: 0rem 1rem;
+  height: 70px;
+  background: var(--paleColor);
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  backdrop-filter: blur(1px);
+  .text {
+    color: var(--whiteColor);
+  }
+  .btn-form {
+    background: var(--whiteColor);
+    color: var(--primaryColor);
+    padding: .8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: .3s ease;
+  }
+  .btn-form:hover{
+    background: #252525;
+  }
+}
+.formDiv{
+  flex-basis: 50%;
+  text-align: center;
+  padding: 1.5rem 0;
+  .headerDiv{
+  
+    h3{
+      font-size: 25px;
+      color: var(--blackColor);
+      font-weight: 600;
+    }
+  }
+  form{
+    gap: 1rem;
+    
+    .showMessage{
+      display: block;
+      padding: 10px;
+      margin: 10px;
+      color: var(--whiteColor);
+      background: var(--showMessageColor);
+    }
+    .inputDiv{
+      
+      
+      input {
+        background-color: transparent;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        width: 200px;
+        padding: 0.24rem ;
+        border-bottom: 1px solid #a19c9c4b;
+      }
+      label{
+        color: var(--blackColor);
+        font-weight: 500;
+        padding: .5rem 0;
+        display: block;
+      }
+      .input{
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--inputColor);
+        transition: background 1s ease;
+        .icon{
+          color: var(--greyText);
+          transition: color 0.75 ease;
+        }
+       
+      }
+      .input:hover{
+        background: var(--hoverColor);
+        .icon{
+          color: var(--blackColor);
+        }
+      }
+    }
+      .btn-form {
+        padding: .8rem;
+        background: var(--primaryColor);
+        border-radius: 10px;
+        color: var(--whiteColor);
+        align-items: center;
+        margin: 1rem auto;
+        justify-content: center;
+
+        font-size: 16px;
+        width: 100%;
+        gap: .5rem;
+      }
+      .forgotPassword{
+        font-size: 13px;
+        color: var(--blackColor);
+        opacity: 0.7;
+        text-align: center;
+        a {
+          text-decoration: underline;
+          cursor: pointer;
+          opacity: .7;
+        }
+      }
+    
+    
+  }
+}
+.message{
+  display: none;
+}
+.showMessage{
+  display: block;
+  color: var(--whiteColor);
+  background-color: red;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .loginPage, .registerPage {
+    .container {
+      width: 100%;
+      height: 80vh;
+      flex-direction: row;
+      padding: 0.5rem 1rem;
+      .videoDiv{
+        width: 100%;
+        min-height: 100%;
+        .textDiv{
+          .title{
+          font-size: 2.1rem;
+          padding: 0.5rem;
+          }
+          p{
+            padding: 1rem;
+          }
+        }
+      }
+      .footerDiv{
+        gap: 1rem;
+        transform: translateY(.75rem);
+      }
+  }
+}
+}
+@media screen and (min-width: 700px) and (max-width: 899px){
+  .loginPage, .registerPage {
+    .container {
+      display: flex;
+      width: 100vw;
+      height: 100%;
+      flex-direction: column;
+      padding: 0.5rem 1rem;
+    
+      .videoDiv{
+        width: 100%;
+        height: 30%;
+        .textDiv{
+          .title{
+          font-size: 2.1rem;
+          padding: 0.5rem;
+          }
+          p{
+            padding: 1rem;
+          }
+        }
+      }
+      .footerDiv{
+        gap: 1rem;
+        transform: translateY(.75rem);
+      }
+    }
+  }
+}
+@media screen and (max-width: 699px){
+  .loginPage, .registerPage {
+    .container {
+      font-size: var(--smallFontSize);
+      width: 100vw;
+      height: 100%;
+      flex-direction: column;
+      padding: 0.5rem 0;
+      .videoDiv{
+        width: 100%;
+        min-height: 20%;
+        .textDiv{
+          .title{
+          font-size: 1.5rem;
+          padding: 0 0.5rem;
+          }
+          p{
+            padding: 0.8rem;
+          }
+        }
+      }
+      .footerDiv{
+        gap: 1rem;
+        transform: translateY(.75rem);
+        height: 30px;
+
+        .btn-form{
+          padding: .2rem 0.75rem;
+        }
+      }
+      form{
+        gap: 0.5rem;
+        font-size: var(--smallestFontSize);
+      }
+    }
+  }
+}

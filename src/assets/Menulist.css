@@ -54,6 +54,7 @@
   padding: 1rem;
   margin: 1rem;
   background-color: var(--secondaryclr);
+  justify-self: start;
   .display-photo {
     height: 150px;
     width: 150px;
